@@ -8,7 +8,7 @@
 
         // Identifiants pour la base de donnée SQL SERVER
        
-        $SQL_SERV="mysql:host=188.165.238.34;port=8080;dbname=social-work-workshop;charset=utf8mb4";
+        $SQL_SERV="mysql:host=188.165.238.34;dbname=social-work-workshop;charset=utf8mb4";
         $SQL_USERNAME="Admin2";
         $SQL_PASSWORD="WorkShop123";
         
