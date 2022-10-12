@@ -14,7 +14,7 @@
         
         try
         {
-            $connexion=new PDO ('mysql:host=localhost;dbname=social-work-workshop;charset=utf8mb4','Admin2','WorkShop123');
+            $connexion=new PDO ('mysql:host=localhost;dbname=social-work-workshop','Admin2','WorkShop123');
         }
         catch(Exeption $e)
         {
