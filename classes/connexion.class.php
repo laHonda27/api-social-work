@@ -8,9 +8,9 @@
 
         // Identifiants pour la base de donnée SQL SERVER
        
-        $SQL_SERV="mysql:host=localhost;dbname=social-work-workshop;charset=utf8mb4";
-        $SQL_USERNAME="root";
-        $SQL_PASSWORD="";
+        $SQL_SERV="mysql:host=188.165.238.34;dbname=social-work-workshop;charset=utf8mb4";
+        $SQL_USERNAME="Admin";
+        $SQL_PASSWORD="WorkShop123";
 
         $attributs = array(
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
