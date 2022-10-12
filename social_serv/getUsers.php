@@ -6,7 +6,7 @@
 
     require('../classes/connexion.class.php');
     
-    $connexion=Connexion::connectMSSQL();
+    $connexion=Connexion::connectMYSQL();
 
     //Lecture des séries
     function getUsers(){

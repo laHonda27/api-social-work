@@ -10,7 +10,7 @@
 
         public function __construct(){
 
-            $this->connexion=Connexion::connectMSSQL();
+            $this->connexion=Connexion::connectMYSQL();
         }
 
         //********************************************************************/
