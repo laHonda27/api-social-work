@@ -8,13 +8,13 @@
 
         // Identifiants pour la base de donnée SQL SERVER
        
-        $SQL_SERV="mysql:host=localhost;dbname=social-work-workshop;charset=utf8mb4";
-        $SQL_USERNAME="root";
-        $SQL_PASSWORD="";
+        $SQL_SERV="mysql:host=188.165.238.34;port=8080;dbname=social-work-workshop;charset=utf8mb4";
+        $SQL_USERNAME="Admin2";
+        $SQL_PASSWORD="WorkShop123";
         
         try
         {
-            $connexion=new PDO ('mysql:host=localhost;dbname=social-work-workshop','Admin2','WorkShop123');
+            $connexion=new PDO ($SQL_SERV,$SQL_USERNAME,$SQL_PASSWORD);
         }
         catch(Exeption $e)
         {
