@@ -1,6 +1,7 @@
 <?php 
 
-require_once('../classes/locDvd_gestion.class.php');
+require_once('../classes/socialWork_gestion.class.php');
+
 $response=array();
 
 if($_SERVER['REQUEST_METHOD']=="POST"){

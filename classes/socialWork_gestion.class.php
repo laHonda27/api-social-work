@@ -87,7 +87,6 @@
         public function addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite){
          
 
-            $hashedMdp= password_hash($mdp,PASSWORD_DEFAULT);
             $sql="INSERT INTO activite (date_creation,places,id_type_activite,id_demandeur,description,places_actuel,icon_activite) VALUES(?,?,?,?,?,?,?)";
             $stmt=$this->connexion->prepare($sql);
             $stmt->bindParam(1,$date_creation,PDO::PARAM_STR);
