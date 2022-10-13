@@ -87,7 +87,7 @@
         public function addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom){
          
 
-            $sql="INSERT INTO activite (date_creation,places,id_type_activite,id_demandeur,description,places_actuel,icon_activite,nom) VALUES(?,?,?,?,?,?,?)";
+            $sql="INSERT INTO activite (date_creation,places,id_type_activite,id_demandeur,description,places_actuel,icon_activite,nom) VALUES(?,?,?,?,?,?,?,?)";
             $stmt=$this->connexion->prepare($sql);
             $stmt->bindParam(1,$date_creation,PDO::PARAM_INT);
             $stmt->bindParam(2,$places,PDO::PARAM_INT);
