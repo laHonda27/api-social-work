@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 else {
     $response['error'] = true;
     $response['state'] = "false";
-    $response['message'] ="Erreur";
+    $response['message'] ="La méthode n'est pas autorisée";
 }
 
 
