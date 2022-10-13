@@ -86,7 +86,7 @@
 
         public function addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom){
          
-            $places_actuel = 0;
+            $places_actuel = 10;
 
             $sql="INSERT INTO activite (date_creation,places) VALUES(?,?)";
             $stmt=$this->connexion->prepare($sql);
