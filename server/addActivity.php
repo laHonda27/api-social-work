@@ -3,6 +3,7 @@
 require ('../classes/socialWork_gestion.class.php');
 
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 
 $response=array();
 
