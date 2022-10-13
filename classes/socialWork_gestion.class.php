@@ -74,7 +74,7 @@
         //Selection d'un utilisateur à partir de l'email************************
         public function getUserByEmail($email){
 
-            $sql="SELECT * FROM users WHERE email = ?";
+            $sql="SELECT * FROM utilisateurs WHERE email = ?";
             $stmt=$this->connexion->prepare($sql);
             $stmt->bindParam(1,$email,PDO::PARAM_STR);
             $stmt->execute();
