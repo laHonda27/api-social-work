@@ -1,6 +1,7 @@
 <?php 
 
-require_once('../classes/socialWork_gestion.class.php');
+require ('../classes/socialWork_gestion.class.php');
+
 header('Content-Type: application/json');
 
 $response=array();
@@ -25,8 +26,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         isset($_POST['icon_activite']) && !empty($_POST['icon_activite']) &&
         isset($_POST['nom']) && !empty($_POST['nom'])){
 
-        $locDvd = new socialWork_gestion();
-        $result = $locDvd->addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom);
+        $socialWork = new socialWork_gestion();
+        $result = $socialWork->addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom);
 
         switch ($result) {
        

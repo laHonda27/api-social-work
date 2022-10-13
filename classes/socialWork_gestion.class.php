@@ -89,10 +89,10 @@
 
             $sql="INSERT INTO activite (date_creation,places,id_type_activite,id_demandeur,description,places_actuel,icon_activite,nom) VALUES(?,?,?,?,?,?,?)";
             $stmt=$this->connexion->prepare($sql);
-            $stmt->bindParam(1,$date_creation,PDO::PARAM_STR);
-            $stmt->bindParam(2,$places,PDO::PARAM_STR);
-            $stmt->bindParam(3,$id_type_activite,PDO::PARAM_STR);
-            $stmt->bindParam(4,$id_demandeur,PDO::PARAM_STR);
+            $stmt->bindParam(1,$date_creation,PDO::PARAM_INT);
+            $stmt->bindParam(2,$places,PDO::PARAM_INT);
+            $stmt->bindParam(3,$id_type_activite,PDO::PARAM_INT);
+            $stmt->bindParam(4,$id_demandeur,PDO::PARAM_INT);
             $stmt->bindParam(5,$description,PDO::PARAM_STR);
             $stmt->bindParam(6,"0",PDO::PARAM_STR);
             $stmt->bindParam(7,$icon_activite,PDO::PARAM_STR);
