@@ -1,7 +1,7 @@
 <?php 
 
     //Autochargement des classes
-        include_once 'connexion.class.php';
+    require ('connexion.class.php');
    
 
     class socialWork_gestion{
