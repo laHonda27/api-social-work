@@ -1,6 +1,8 @@
 <?php 
 
 require_once('../classes/socialWork_gestion.class.php');
+header('Content-Type: application/json');
+
 $response=array();
 if($_SERVER['REQUEST_METHOD']=="POST"){
     if (isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['role']) && isset($_POST['name']) ){

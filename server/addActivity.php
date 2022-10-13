@@ -1,6 +1,7 @@
 <?php 
 
-require_once('../classes/socialWork_gestion.class.php');
+require('../classes/socialWork_gestion.class.php');
+header('Content-Type: application/json');
 
 $response=array();
 
