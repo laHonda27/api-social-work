@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         isset($_POST['description']) && !empty($_POST['description']) &&
         isset($_POST['icon_activite']) && !empty($_POST['icon_activite'])){
 
-        $locDvd = new locDvdSerie_gestion();
+        $locDvd = new socialWork_gestion();
         $result = $locDvd->addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite);
 
         switch ($result) {
@@ -39,6 +39,10 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     }
     
     
+}
+else {
+    $response['error'] = true;
+    $response['message'] ="La méthode n'est pas autorisée";
 }
 echo json_encode($response,JSON_UNESCAPED_UNICODE);
 
