@@ -13,6 +13,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $id_demandeur = htmlspecialchars($_POST['id_demandeur']);
     $description = htmlspecialchars($_POST['description']);
     $icon_activite = htmlspecialchars($_POST['icon_activite']);
+    $nom = htmlspecialchars($_POST['nom']);
     
     
     
@@ -21,10 +22,11 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         isset($_POST['id_type_activite']) && !empty($_POST['id_type_activite']) &&
         isset($_POST['id_demandeur']) && !empty($_POST['id_demandeur']) &&
         isset($_POST['description']) && !empty($_POST['description']) &&
-        isset($_POST['icon_activite']) && !empty($_POST['icon_activite'])){
+        isset($_POST['icon_activite']) && !empty($_POST['icon_activite']) &&
+        isset($_POST['nom']) && !empty($_POST['nom'])){
 
         $locDvd = new socialWork_gestion();
-        $result = $locDvd->addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite);
+        $result = $locDvd->addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom);
 
         switch ($result) {
        
