@@ -94,7 +94,7 @@
             $stmt->bindParam(3,$id_type_activite,PDO::PARAM_INT);
             $stmt->bindParam(4,$id_demandeur,PDO::PARAM_INT);
             $stmt->bindParam(5,$description,PDO::PARAM_STR);
-            $stmt->bindParam(6,"0",PDO::PARAM_STR);
+            $stmt->bindParam(6,0,PDO::PARAM_INT);
             $stmt->bindParam(7,$icon_activite,PDO::PARAM_STR);
             $stmt->bindParam(8,$nom,PDO::PARAM_STR);
 
