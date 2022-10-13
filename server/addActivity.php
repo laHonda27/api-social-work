@@ -1,9 +1,11 @@
 <?php 
 
-require ('../classes/socialWork_gestion.class.php');
-
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
+
+require ('../classes/socialWork_gestion.class.php');
+
+
 
 $response=array();
 
