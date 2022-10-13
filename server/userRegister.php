@@ -3,10 +3,10 @@
 require_once('../classes/socialWork_gestion.class.php');
 $response=array();
 if($_SERVER['REQUEST_METHOD']=="POST"){
-    if (isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['role']) && isset($_POST['first_name']) ){
+    if (isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['role']) && isset($_POST['name']) ){
 
         $socialWork = new socialWork_gestion();
-        $result = $socialWork->addUser($_POST['email'],$_POST['mdp'],$_POST['role'],$_POST['first_name']);
+        $result = $socialWork->addUser($_POST['email'],$_POST['mdp'],$_POST['role'],$_POST['name']);
 
         switch ($result) {
             case '1': {

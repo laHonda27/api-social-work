@@ -28,7 +28,7 @@
 
         }
         //Methode d'enregistrement dans la bdd*****************************
-        public function addUser($email,$mdp,$role,$first_name){
+        public function addUser($email,$mdp,$role,$name){
          
 
             if ($this->userExist($email)){
@@ -36,14 +36,14 @@
             }
             else {
                
-                if ($email !="" && $mdp!="" && $role!=""  && $first_name!=""){
+                if ($email !="" && $mdp!="" && $role!=""  && $name!=""){
                    
                     $hashedMdp= password_hash($mdp,PASSWORD_DEFAULT);
-                    $sql="INSERT INTO utilisateurs (email,role,prenom,mdp) VALUES(?,?,?,?)";
+                    $sql="INSERT INTO utilisateurs (email,role,name,mdp) VALUES(?,?,?,?)";
                     $stmt=$this->connexion->prepare($sql);
                     $stmt->bindParam(1,$email,PDO::PARAM_STR);
                     $stmt->bindParam(2,$role,PDO::PARAM_STR);
-                    $stmt->bindParam(3,$first_name,PDO::PARAM_STR);
+                    $stmt->bindParam(3,$name,PDO::PARAM_STR);
                     $stmt->bindParam(4,$hashedMdp,PDO::PARAM_STR);
 
                     if($stmt->execute()){
