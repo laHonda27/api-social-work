@@ -114,9 +114,8 @@
             $stmt= $this->connexion->prepare($sql);
             $stmt->execute([$places_actuel, $id_activite]);
 
-            if($stmt->execute()){
                 return 1;
-            }
+            
 
         }
 
