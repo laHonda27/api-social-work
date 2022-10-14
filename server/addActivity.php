@@ -6,6 +6,7 @@ header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Content-type: text/html; charset=UTF-8'); 
 header('Access-Control-Allow-Headers: X-Requested-With');
 
+
 require ('../classes/socialWork_gestion.class.php');
 
 
@@ -15,6 +16,7 @@ $response=array();
 if($_SERVER['REQUEST_METHOD']=="POST"){
 
     $date_creation = htmlspecialchars($_POST['date_creation']);
+    $date_evenement = htmlspecialchars($_POST['date_evenement']);
     $places = htmlspecialchars($_POST['places']);
     $id_type_activite = htmlspecialchars($_POST['id_type_activite']);
     $id_demandeur = htmlspecialchars($_POST['id_demandeur']);
@@ -30,10 +32,11 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         isset($_POST['id_demandeur']) && !empty($_POST['id_demandeur']) &&
         isset($_POST['description']) && !empty($_POST['description']) &&
         isset($_POST['icon_activite']) && !empty($_POST['icon_activite']) &&
-        isset($_POST['nom']) && !empty($_POST['nom'])){
+        isset($_POST['nom']) && !empty($_POST['nom']) &&
+        isset($_POST['date_evenement']) && !empty($_POST['date_evenement'])){
 
         $socialWork = new socialWork_gestion();
-        $result = $socialWork->addActivity($date_creation,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom);
+        $result = $socialWork->addActivity($date_creation,$date_evenement,$places,$id_type_activite,$id_demandeur,$description,$icon_activite,$nom);
 
         switch ($result) {
        
@@ -53,7 +56,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 }
 else {
     $response['error'] = true;
-    $response['message'] ="La méthode n'est pas autorisée";
+    $response['message'] ="La méthode n'est pas autorisée.";
 }
 echo json_encode($response,JSON_UNESCAPED_UNICODE);
 
