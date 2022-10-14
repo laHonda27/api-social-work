@@ -111,7 +111,7 @@
             $places_actuel = 0;
 
             $sql = "UPDATE activite SET places_actuel=? WHERE id_activite =?";
-            $stmt= $pdo->prepare($sql);
+            $stmt= $this->connexion->prepare($sql);
             $stmt->execute([$places_actuel, $id_activite]);
 
             if($stmt->execute()){
