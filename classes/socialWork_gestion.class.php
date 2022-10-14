@@ -106,5 +106,18 @@
 
         }
 
+        public function addPlace($id_activite , $places_actuel){
+         
+            $places_actuel = 0;
+
+            $sql = "UPDATE activite SET places_actuel=? WHERE id_activite =?";
+            $stmt->prepare($sql)->execute([$places_actuel, $id_activite]);     
+
+            if($stmt->execute()){
+                return 1;
+            }
+
+        }
+
     }
 ?>
